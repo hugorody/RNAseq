@@ -263,8 +263,8 @@ for (i in modules){
         # Export the network into edge and node list files Cytoscape can read
 
         cyt = exportNetworkToCytoscape(modTOM,
-                edgeFile = paste(experiment,i,"CytoscapeInput-edges-", paste(i, collapse="-"), ".txt", sep=""),
-                nodeFile = paste(experiment,i,"CytoscapeInput-nodes-", paste(i, collapse="-"), ".txt", sep=""),
+                edgeFile = paste(experiment, i, "CytoscapeInput-edges-", collapse="-", ".txt", sep=""),
+                nodeFile = paste(experiment, i, "CytoscapeInput-nodes-", collapse="-", ".txt", sep=""),
                 weighted = TRUE,
                 threshold = 0.02,
                 nodeNames = modProbes,
