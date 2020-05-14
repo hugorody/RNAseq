@@ -42,11 +42,15 @@ enableWGCNAThreads()
 #
 #=====================================================================================
 
+#By raising the absolute value of the correlation to a power
+#Beta >= I (soft thresholding), the weighted gene co-expression network
+#construction emphasizes high correlations at the expense of low correlations.
 
 # Choose a set of soft-thresholding powers
 powers = c(c(1:10), seq(from = 12, to=40, by=2))
 # Call the network topology analysis function
 sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
+
 # Plot the results:
 sizeGrWindow(9, 5)
 par(mfrow = c(1,2));
@@ -129,6 +133,7 @@ plot(geneTree, xlab="", sub="", main = "Gene clustering on TOM-based dissimilari
 minModuleSize = 30;
 
 # Module identification using dynamic tree cut:
+# Modules are defined as clusters of densely interconnected genes.
 dynamicMods = cutreeDynamic(dendro = geneTree, distM = dissTOM,
                 deepSplit = 2, pamRespectsDendro = FALSE,
                 minClusterSize = minModuleSize);
