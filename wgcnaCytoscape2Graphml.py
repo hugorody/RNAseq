@@ -32,32 +32,8 @@ with open(functionalannotation,"r") as set1:
         i = i.rstrip().split("\t")
         if "#" not in i[0]:
             transcriptid = i[0]
-            orfid = i[1]
-            Orthogroup = i[2]
-            MAPKs = i[3]
-            TFs = i[4]
-            RGA = i[5]
-            IPR = i[6]
-            Pfam = i[7]
-            TMHMM2 = i[8]
-            TargetP2 = i[9]
-            SignalP5 = i[10]
             BesthitAth = re.sub(".[0-9]$","",i[11])
             BesthitAthannotation = i[12]
-            #BesthitZmays = i[13]
-            SP_UPDOWN = i[14]
-            SP_LFC = i[15]
-            IAC_UPDOWN = i[16]
-            IAC_LFC = i[17]
-            RB05_UPDOWN = i[18]
-            RB05_LFC = i[19]
-            RB200_UPDOWN = i[20]
-            RB200_LFC = i[21]
-            Blast2GO = i[22]
-            GO = i[23]
-            KOG = i[24]
-            #Transcriptseq = i[25]
-            #ORFseq = i[26]
 
             #FEED DICTIONARIES
             compggfunc[transcriptid] = i
