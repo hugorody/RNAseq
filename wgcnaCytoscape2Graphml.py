@@ -73,7 +73,7 @@ for i in targetgenes.items():
     print (i[0],i[1])
 ################################################################################
 # GRAPH MODELING
-quit()
+
 #CREATE ONE SEPARATED GRAPH FOR EACH OF TARGETED MODULES
 for m in targetmodules.items():
     os.chdir(dir1)
